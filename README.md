@@ -16,10 +16,12 @@ nodemon server.js
 ```
 - Admin (port-5173):
 ```
+npm install
 npm run dev 
 ```
 - Frontend (port-5174):
 ```
+npm install
 npm run dev
 ```
 
