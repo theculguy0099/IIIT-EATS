@@ -8,7 +8,7 @@ JWT_SECRET=your_jwt_secret_here
 STRIPE_SECRET_KEY=your_stripe_secret_key_here
 ```
 
-## Usage (order-wise)
+## Usage
 
 - Backend :
 ```
@@ -24,4 +24,4 @@ npm run dev
 ```
 
 ### Note: 
-- A script is also present for adding pre-defined food list to the portal for seamless usage.
+- A script is also present in the backend folder for adding pre-defined food list to the portal for seamless usage.
