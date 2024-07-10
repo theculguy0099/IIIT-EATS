@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.cart {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cart-container {
+  display: flex;
+  gap: 30px;
+}
+
+.cart-items {
+  flex: 2;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  font-size: 1.2rem;
+  margin: 0 0 5px;
+}
+
+.cart-item-details p {
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-quantity button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart-item-quantity button:hover {
+  background: #ff6b6b;
+}
+
+.cart-item-total {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cart-summary {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.cart-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cart-summary-details {
+  margin-bottom: 30px;
+}
+
+.cart-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.cart-summary-item.total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #45a049;
+}
+
+.promo-code {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.promo-code input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.promo-code button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.promo-code button:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-summary {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .cart-item-quantity {
+    justify-content: center;
+  }
+
+  .cart-item-total {
+    margin-top: 15px;
+  }
+}
+
+/* Add these styles to your existing Cart.css file */
+
+/* Enhanced Cart.css */
+
+.available-coupons {
+    margin-top: 40px;
+    background: linear-gradient(145deg, #f6f9fc, #e9f1f9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .available-coupons h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .coupon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coupon strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  
+  .coupon p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin: 0;
+  }
+  
+  .coupon button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  
+  .coupon button:hover {
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  }
+  
+  .applied-coupon {
+    margin-top: 25px;
+    background: linear-gradient(145deg, #e1f5fe, #b3e5fc);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    50% {
+      box-shadow: 0 5px 20px rgba(3, 169, 244, 0.2);
+    }
+    100% {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+  .applied-coupon p {
+    margin: 0;
+    font-weight: 600;
+    color: #0288d1;
+    font-size: 1.1rem;
+  }
+  
+  .applied-coupon button {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  
+  .applied-coupon button:hover {
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  }
+  
+  .cart-summary-item.discount {
+    color: #27ae60;
+    font-weight: 600;
+    animation: fadeInOut 2s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  @media (max-width: 768px) {
+    .coupon {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .coupon button {
+      margin-top: 15px;
+      align-self: flex-end;
+    }
+  
+    .applied-coupon {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .applied-coupon button {
+      margin-top: 15px;
+      align-self: flex-end;
+    }
+  }
+  
+  /* Add some fancy hover effects to the cart items */
+  .cart-item {
+    transition: all 0.3s ease;
+  }
+  
+  .cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Improve the promo code input styling */
+  .promo-code {
+    display: flex;
+    margin-top: 25px;
+  }
+  
+  .promo-code input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .promo-code input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+  }
+  
+  .promo-code button {
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .promo-code button:hover {
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  }

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --hover-color: #2980b9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 4%;
+  background: linear-gradient(135deg, var(--secondary-color), #34495e);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: max(10%, 80px);
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.admin-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.admin-title span {
+  display: inline-block;
+  padding: 0 10px;
+  background: rgba(236, 240, 241, 0.1);
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.admin-title span:first-child {
+  color: var(--primary-color);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.admin-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.admin-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #bdc3c7;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.navbar .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar .profile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+.admin-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1000;
+  animation: dropdownFadeIn 0.3s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-dropdown-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dropdown-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.admin-dropdown-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.admin-dropdown-header p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.admin-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dropdown li {
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-dropdown li:hover {
+  background: #f5f5f5;
+}
+
+.admin-dropdown li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.admin-dropdown .logout {
+  border-top: 1px solid #eee;
+  color: #e74c3c;
+}
+
+.admin-dropdown .logout i {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-center {
+    order: -1;
+  }
+
+  .admin-title {
+    font-size: 24px;
+  }
+
+  .admin-info {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-title {
+    font-size: 20px;
+  }
+
+  .navbar .logo {
+    width: 60px;
+  }
+
+  .admin-dropdown {
+    width: 200px;
+  }
+}

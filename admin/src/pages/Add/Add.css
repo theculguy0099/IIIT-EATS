@@ -1,0 +1,231 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+  }
+  
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+  }
+  
+  .add {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .add form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .add-img-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .add-img-upload label {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .add-img-upload label:hover {
+    transform: scale(1.05);
+  }
+  
+  .add-img-upload img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ /* ... (keep the existing CSS above) ... */
+
+.add-product-name,
+.add-product-description,
+.add-category-price {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-category-price select,
+.add-category-price input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus,
+.add-category-price select:focus,
+.add-category-price input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+.add-product-name input:focus + label,
+.add-product-description textarea:focus + label,
+.add-category-price select:focus + label,
+.add-category-price input:focus + label,
+.add-product-name input:not(:placeholder-shown) + label,
+.add-product-description textarea:not(:placeholder-shown) + label,
+.add-category-price select:not(:placeholder-shown) + label,
+.add-category-price input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.add-product-name label,
+.add-product-description label,
+.add-category-price label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.add-product-description label {
+  top: 20px;
+  transform: none;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 20px;
+}
+
+.add-category-price > div {
+  flex: 1;
+  position: relative;
+}
+
+.add-category-price select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23999" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  padding-right: 30px;
+}
+
+.add-btn {
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto 0;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+.add-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.add-btn:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* ... (keep the existing media queries) ... */
+  
+  @media (max-width: 768px) {
+    .add {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .add-category-price {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .add-btn {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .add {
+      padding: 15px;
+    }
+  
+    .add-img-upload img {
+      width: 120px;
+      height: 120px;
+    }
+  }

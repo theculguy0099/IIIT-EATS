@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --hover-color: #2980b9;
+  --glow-color: rgba(52, 152, 219, 0.5);
+}
+
+.sidebar {
+  background: linear-gradient(135deg, var(--secondary-color), #34495e);
+  height: calc(100vh - 60px); /* Adjust for navbar height */
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 111px; /* Adjust for navbar height */
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-option:hover, .sidebar-option.active {
+  background-color: var(--hover-color);
+  transform: translateX(5px);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sidebar-option img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  filter: invert(1);
+}
+
+.sidebar-option p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    top: 220px;
+    width: 80px;
+    padding: 10px;
+  }
+
+  .sidebar-option {
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .sidebar-option p {
+    display: none;
+  }
+
+  .sidebar-option img {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    top: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar-options {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .sidebar-option {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .sidebar-option img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  .sidebar-option p {
+    display: block;
+    font-size: 12px;
+  }
+}

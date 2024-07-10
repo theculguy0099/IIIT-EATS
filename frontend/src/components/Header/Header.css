@@ -1,0 +1,70 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("./head1.jpg") no-repeat;  background-position: center 40%;
+  background-size:auto;
+  position: relative;
+}
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+.header-contents h2 {
+  font-weight: 500;
+  color:rgb(22, 244, 40);
+  font-size: max(4.5vw, 22px);
+}
+.header-contents p {
+  color: rgb(214, 221, 13);
+  font-size: 1.2vw;
+  font-style: italic;
+  font-weight: 400;
+  word-spacing: 2px;
+
+}
+.header-contents button {
+  border: none;
+  color: #747474;
+  padding: 1vw 2.3vw;
+  font-weight: 500;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.header-contents button{
+  background-color: #f1f1f1;
+}
+.header-contents button:hover {
+  background-color:aqua;
+}
+.btn a{
+  color: black;
+  font-weight: 600;
+  font-size: large;
+}
+@media (max-width: 1050px) {
+  .header-contents{
+    max-width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .header-contents{
+    max-width:65%;
+  }
+  .header-contents p{
+    display: none;
+  }
+  .header-contents button{
+    padding: 2vw 4vw;
+  }
+}
